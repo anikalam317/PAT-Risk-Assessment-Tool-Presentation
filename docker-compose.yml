@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+
+  revealjs:
+    image: pat-risk-assessment-tool
+    container_name: pat-risk-assessment-tool
+    ports:
+      - "3000:3000"
+    build:
+      context: .
+      dockerfile: Dockerfile

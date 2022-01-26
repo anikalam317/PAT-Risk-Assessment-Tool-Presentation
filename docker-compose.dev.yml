@@ -1,0 +1,20 @@
+version: '3.5'
+services:
+
+  revealjs:
+    image: pat-risk-assessment-tool
+    container_name: pat-risk-assessment-tool
+      - "3000:3000"
+    build:
+      context: .
+      dockerfile: Dockerfile_dev
+    volumes:
+      - type: bind
+        source: ./index.html
+        target: /app/index.html
+      - type: bind
+        source: ./favicon.svg
+        target: /app/favicon.svg
+      - type: bind
+        source: ./src
+        target: /app/src
